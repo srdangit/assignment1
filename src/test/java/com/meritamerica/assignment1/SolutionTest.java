@@ -39,6 +39,11 @@ import static org.junit.Assert.*;
 
 public class SolutionTest {
 
+	@Test
+	public void testTest () {
+		
+	}
+	
     @Test
     public void testCreateAccountHolder(){
         AccountHolder accountHolder = new AccountHolder(

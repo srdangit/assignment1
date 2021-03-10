@@ -41,7 +41,7 @@ public class SolutionTest {
 
 	@Test
 	public void testTest () {
-		
+//		assertEquals(2, 1);
 	}
 	
     @Test
@@ -136,21 +136,26 @@ public class SolutionTest {
         	100.0);
         
         assertEquals(false, accountHolder.getSavingsAccount().withdraw(500.0));
+        assertEquals("Sadiq", accountHolder.getFirstName());
+        assertEquals("123456789", accountHolder.getSSN());
+        
     }
 
     @Test
     public void testFutureValueInSavingsAccount(){
         AccountHolder accountHolder = new AccountHolder(
-        	"Sadiq",
+        	"TestFirstName",
         	"",
         	"Manji",
-        	"123456789",
+        	"111222333",
         	100.0,
         	100.0);
 
         double fv = 100.0 * Math.pow(1 + 0.01, 3);
         
         assertEquals(fv, accountHolder.getSavingsAccount().futureValue(3), 0);
+        assertEquals("TestFirstName", accountHolder.getFirstName());
+        assertEquals("111222333", accountHolder.getSSN());
     }
 
     @Test
